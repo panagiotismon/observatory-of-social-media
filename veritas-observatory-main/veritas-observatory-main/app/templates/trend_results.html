@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/results.css')}}" />
+{% endblock %}
+<body>
+  {% block main %}
+  <br>
+  <section class="container">
+    <div class="row">
+      <div class="tm-activity-block-text">
+        <h3 class="tm-text-blue">Trends and Trustworthiness</h3>
+        <p>
+          This tool appears the most shared posts. You can check also their votes in an interactive way according to the
+          level of trustworthiness you want to take into account.
+        </p><br>
+      </div>
+    </div>
+    <div style="float:left; width:55%">
+      {{ div4|safe }}
+    </div>
+    <div style="float:left; width:44%">
+      The most shared posts are depicted according to the number of shares and the posts' date.
+      Hover the mouse over the bars to see the total number of votes and the text of the post as well.
+      The green color represents a post with more trustful votes as the red color represents post with more mistrusted
+      votes.
+      The blue color indicates that the post has equal trusted and mistrusted votes and the grey color indicates that the
+      post has no vote (or ignored).
+      <br />
+      <img src="{{url_for('static', filename='ipomnima1.jpg')}}" style="width:60%; height:60%;">
+    </div>
+  </section>
+  {% endblock %}
+  {% block scripts %}
+  <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.2.min.js"></script>
+  <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.3.2.min.js"></script>
+  <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.3.2.min.js"></script>
+  {{ script4|safe }}
+  {% endblock %}
+</body>
+
+</html>

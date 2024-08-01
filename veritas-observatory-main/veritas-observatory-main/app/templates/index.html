@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+<body>
+  {% block main %}
+  <!-- Features -->
+  <section class="container tm-features-section" id="features">
+    <div class="row tm-features-row">
+      <div class="col-md-6 col-sm-12 tm-feature-block">
+        <header class="tm-feature-header">
+          <!--<i class="fas fa-5x fa-anchor tm-feature-icon"></i>  -->
+          <h3 class="tm-feature-h">Developing information hygiene habits with EUNOMIA</h3>
+        </header>
+        <p>
+          What is information hygiene?
+        </p>
+        <p>
+          Information hygiene is the practice of following daily routines that reduce the risk of acting upon and
+          sharing
+          misinformation to one's network. EUNOMIA is a social media platform with added tools that help people develop
+          such information hygiene habits and protect
+          other against misinformation.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 tm-feature-block">
+        <header class="tm-feature-header">
+          <!-- <i class="fas fa-5x fa-atom tm-feature-icon"></i> -->
+          <h3 class="tm-feature-h">Other information hygine tips:</h3>
+        </header>
+        <p>
+          Be mindful of your emotions when reading a post; Anger makes you susceptible to biases.
+        </p>
+        <p>
+          Refrain from sharing based only on a headline.
+        </p>
+        <p>
+          Use evidence to refute the post if you are going to share it.
+        </p>
+        <p>
+          Be wary of resharing information for its high novelty.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Activities -->
+  <section class="container" id="tools">
+    <div class="row">
+      <div class="col-12">
+        <div class="tm-parallax">
+          <header class="tm-parallax-header">
+            <h2 class="">Tools</h2>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="tm-activity-block">
+          <div class="tm-activity-img-container">
+            <img src="{{url_for('static', filename='lineplot.png')}}" alt="Image" class="lineplotimg" />
+          </div>
+          <div class="tm-activity-block-text">
+            <h3 class="tm-text-blue"><a href="/observatory/sentimentanalysis">Sentiment Analysis of hashtags</h3><a>
+              <p>
+                This tool provides visualization about hashtags. You can search in a given period of time the sentiment
+                analysis of posts with specific hashtags.
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="tm-activity-block mr-lg-0 ml-lg-auto">
+          <div class="tm-activity-img-container"><img src="{{url_for('static', filename='barplot.jpg')}}" alt="Image"
+              class="barplotimg" /></div>
+          <div class="tm-activity-block-text">
+            <h3 class="tm-text-blue"><a href="/observatory/trends"> Trends and Trustworthiness</h3><a>
+              <p>
+                This tool appears the most shared posts. You can check also their votes in an interactive way according
+                to the level of trustworthiness you want to take into account.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container tm-company-section" id="project">
+    <div class="row">
+      <div class="project">
+        <div class="tm-company-about">
+          <div class="tm-company-img-container">
+            <img src="{{url_for('static', filename='img-05.jpg')}}" alt="Image" />
+          </div>
+          <div class="tm-company-about-text">
+            <header>
+              <h2 class="tm-company-about-header">Project</h2>
+            </header>
+            <p>
+              User-oriented, secure, trustful & decentralised social media
+            </p>
+            <p class="mb-4">
+              EUNOMIA is developing the first social media environment designed to prioritise trust over likes.
+
+              Powered by Mastodon and supported by a unique peer-to-peer and blockchain infrastructure, it is fully
+              decentralised and disintermediated. Its open-source tools help the user quickly and confidently assess the
+              trustworthiness of information shared through EUNOMIA without relying on any third party expert or social
+              media platform to do it for them.
+            </p>
+            <a href="https://www.eunomia.social/" target="_blank" class="btn tm-btn tm-float-right">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section class="container tm-contact-section" id="contact">
+    <div class="row">
+      <div class="col-xl-5 col-lg-6 col-md-12 tm-contact-left">
+        <div class="tm-contact-form-container ml-auto mr-0">
+          <header>
+            <h2 class="tm-contact-header">Contact Us</h2>
+          </header>
+          <div class="text">
+		  Click <a href = "mailto: panagiotisvm@gmail.com">here</a> for the Eunomia Observatory technical team
+            <br><br>
+            Click here for the Eunomia Administration team
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-7 col-lg-6 col-md-12 tm-contact-right">
+        <div class="tm-contact-figure-block">
+          <figure class="d-inline-block">
+            <img src="{{url_for('static', filename='contact.png')}}" alt="Image" class="img-fluid" />
+            <figcaption class="tm-contact-figcaption">
+              Project EUNOMIA on Twitter
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  {% endblock %}
+</body>
+
+</html>

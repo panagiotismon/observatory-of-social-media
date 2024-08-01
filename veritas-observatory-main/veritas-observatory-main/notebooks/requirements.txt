@@ -1,0 +1,7 @@
+requests
+pandas
+transformers
+tweet-preprocessor
+geopy
+tqdm
+jupyterlab

@@ -1,0 +1,7 @@
+Flask
+requests
+pandas
+Bokeh
+html2text
+flask_nav
+waitress

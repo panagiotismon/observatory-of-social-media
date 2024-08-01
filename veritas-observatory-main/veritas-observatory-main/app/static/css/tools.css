@@ -1,0 +1,28 @@
+#tmVideoSection {
+  height: 300px !important;
+}
+
+#scroll-top-button {
+  visibility: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  width: 100%;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

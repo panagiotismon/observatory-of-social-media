@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/results.css')}}" />
+{% endblock %}
+
+<body>
+  {% block main %}
+  <br>
+  <section class="container">
+    <div class="tm-activity-block-text">
+      <h3 class="tm-text-blue">Sentiment Analysis of hashtags</h3>
+      <p>
+        The first plot depicts the sentiment analysis of the hashtags.The next plot depicts the
+        votes of posts with the corresponding hashtag.
+      </p><br>
+    </div>
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12" style="background-color:white; width:0%"></div>
+      <div class="col-xl-12 col-lg-12 col-md-12" style="background-color:white; width:49%">
+        {{ div|safe }}
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        {{ div2|safe }}
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        {{ div3|safe }}
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+  {% block scripts %}
+  <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.2.min.js"></script>
+  <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.3.2.min.js"></script>
+  <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.3.2.min.js"></script>
+  {{ script|safe }}
+  {{ script2|safe }}
+  {{ script3|safe }}
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+
+
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/tools.css')}}" />
+{% endblock %}
+
+<body>
+  {% block main %}
+  <br>
+  <section class="container" id="results">
+    <div class="tm-activity-block-text">
+      <h1 class="tm-text-blue">No result</h1>
+      <br>
+      <br>
+    </div>
+  </section>
+  <br>
+  <div class="row">
+  </div>
+  {% endblock %}
+</body>
+</html>
